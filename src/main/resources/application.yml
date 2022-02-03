@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: core-serivce
+
+server:
+  port: 8082
