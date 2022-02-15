@@ -1,8 +1,11 @@
 package com.itransition.core.util;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpHeaders;
 
-public final class AuthorizationUtil {
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class AuthorizationUtils {
 
     public static boolean checkAuthorization(HttpHeaders headers) {
         String token = headers.getFirst(HttpHeaders.AUTHORIZATION);
