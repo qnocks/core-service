@@ -1,7 +1,7 @@
-package com.itransition.core.service.impl;
+package com.itransition.core.transaction.service.impl;
 
-import com.itransition.core.dto.TransactionReplenishDto;
-import com.itransition.core.service.TransactionService;
+import com.itransition.core.transaction.dto.TransactionReplenishDto;
+import com.itransition.core.transaction.service.TransactionService;
 import org.springframework.stereotype.Service;
 
 @Service

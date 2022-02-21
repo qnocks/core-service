@@ -1,4 +1,4 @@
-package com.itransition.core.dto;
+package com.itransition.core.transaction.dto;
 
 import java.math.BigDecimal;
 import lombok.AllArgsConstructor;

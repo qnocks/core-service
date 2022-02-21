@@ -1,7 +1,7 @@
-package com.itransition.core.service.impl;
+package com.itransition.core.account.service.impl;
 
-import com.itransition.core.dto.AccountDto;
-import com.itransition.core.service.AccountService;
+import com.itransition.core.account.dto.AccountDto;
+import com.itransition.core.account.service.AccountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

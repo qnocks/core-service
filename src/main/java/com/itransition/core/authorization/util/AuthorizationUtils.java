@@ -1,4 +1,4 @@
-package com.itransition.core.util;
+package com.itransition.core.authorization.util;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

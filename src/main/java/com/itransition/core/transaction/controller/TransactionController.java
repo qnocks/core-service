@@ -1,8 +1,8 @@
-package com.itransition.core.controller;
+package com.itransition.core.transaction.controller;
 
-import com.itransition.core.dto.TransactionReplenishDto;
-import com.itransition.core.service.TransactionService;
-import com.itransition.core.util.AuthorizationUtils;
+import com.itransition.core.transaction.dto.TransactionReplenishDto;
+import com.itransition.core.transaction.service.TransactionService;
+import com.itransition.core.authorization.util.AuthorizationUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +26,9 @@ public class TransactionController {
             transactionService.replenish(replenishDto);
         }
 
+        // TODO: implement 'smart' mocking response when external payment service is over
+        //  meanwhile comment out either success or failed response
+//        return ResponseEntity.internalServerError().build();
         return ResponseEntity.ok().build();
     }
 }

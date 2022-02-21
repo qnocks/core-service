@@ -1,7 +1,7 @@
-package com.itransition.core.service.impl;
+package com.itransition.core.authorization.service.impl;
 
-import com.itransition.core.dto.AuthResponse;
-import com.itransition.core.service.AuthorizationService;
+import com.itransition.core.authorization.dto.AuthResponse;
+import com.itransition.core.authorization.service.AuthorizationService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
