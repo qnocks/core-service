@@ -1,10 +1,8 @@
-package com.itransition.core.controller;
+package com.itransition.core.authorization.controller;
 
-import com.itransition.core.dto.AuthResponse;
-import com.itransition.core.service.AuthorizationService;
+import com.itransition.core.authorization.dto.AuthResponse;
+import com.itransition.core.authorization.service.AuthorizationService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,7 +15,11 @@ public class AuthorizationController {
     private final AuthorizationService authorizationService;
 
     @PostMapping(value = "/token", params = {"grant_type", "client_secret", "client_id"})
-    public ResponseEntity<AuthResponse> authorize() {
-        return new ResponseEntity<>(authorizationService.authorize(), HttpStatus.OK);
+    public AuthResponse authorize() {
+
+        // TODO: implement 'smart' mocking response when external payment service is over
+        //  meanwhile comment out either success or failed response
+//        throw new IllegalStateException();
+        return authorizationService.authorize();
     }
 }

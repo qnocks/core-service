@@ -1,8 +1,8 @@
-package com.itransition.core.controller;
+package com.itransition.core.account.controller;
 
-import com.itransition.core.dto.AccountDto;
-import com.itransition.core.service.AccountService;
-import com.itransition.core.util.AuthorizationUtil;
+import com.itransition.core.account.dto.AccountDto;
+import com.itransition.core.account.service.AccountService;
+import com.itransition.core.authorization.util.AuthorizationUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -23,8 +23,11 @@ public class AccountController {
     @GetMapping("/{account_id}")
     public ResponseEntity<AccountDto> checkExistingAccount(@PathVariable("account_id") String accountId,
                                                            @RequestHeader HttpHeaders headers) {
-        if (AuthorizationUtil.checkAuthorization(headers)) {
-            return new ResponseEntity<>(accountService.checkExistingAccount(accountId), HttpStatus.OK);
+        if (AuthorizationUtils.checkAuthorization(headers)) {
+            // TODO: implement 'smart' mocking response when external payment service is over
+            //  meanwhile comment out either success or failed response
+//            return ResponseEntity.badRequest().build();
+            return ResponseEntity.ok(accountService.checkExistingAccount(accountId));
         }
 
         return new ResponseEntity<>(HttpStatus.FORBIDDEN);

@@ -1,4 +1,4 @@
-package com.itransition.core.dto;
+package com.itransition.core.authorization.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
