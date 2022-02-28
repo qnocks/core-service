@@ -17,7 +17,7 @@ public class AuthorizationController {
     private final AuthorizationService authorizationService;
 
     @PostMapping(value = "/token", params = {"grant_type", "client_secret", "client_id"})
-    public ResponseEntity<AuthResponse> authorize() {
-        return new ResponseEntity<>(authorizationService.authorize(), HttpStatus.OK);
+    public AuthResponse authorize() {
+        return authorizationService.authorize();
     }
 }
