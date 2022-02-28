@@ -2,12 +2,14 @@ package com.itransition.core.authorization.service.impl;
 
 import com.itransition.core.authorization.dto.AuthResponse;
 import com.itransition.core.authorization.service.AuthorizationService;
-import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-@Slf4j
 @Service
 public class AuthorizationServiceImpl implements AuthorizationService {
+
+    private final Logger log = LogManager.getLogger(AuthorizationServiceImpl.class);
 
     @Override
     public AuthResponse authorize() {

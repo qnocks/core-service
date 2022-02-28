@@ -16,10 +16,8 @@ public class AuthorizationController {
 
     @PostMapping(value = "/token", params = {"grant_type", "client_secret", "client_id"})
     public AuthResponse authorize() {
-
         // TODO: implement 'smart' mocking response when external payment service is over
         //  meanwhile comment out either success or failed response
-//        throw new IllegalStateException();
         return authorizationService.authorize();
     }
 }

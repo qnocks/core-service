@@ -3,6 +3,7 @@ package com.itransition.core.transaction.controller;
 import com.itransition.core.transaction.dto.TransactionReplenishDto;
 import com.itransition.core.transaction.service.TransactionService;
 import com.itransition.core.authorization.util.AuthorizationUtils;
+import javax.crypto.KeyGenerator;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -28,7 +29,6 @@ public class TransactionController {
 
         // TODO: implement 'smart' mocking response when external payment service is over
         //  meanwhile comment out either success or failed response
-//        return ResponseEntity.internalServerError().build();
         return ResponseEntity.ok().build();
     }
 }

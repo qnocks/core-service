@@ -26,7 +26,6 @@ public class AccountController {
         if (AuthorizationUtils.checkAuthorization(headers)) {
             // TODO: implement 'smart' mocking response when external payment service is over
             //  meanwhile comment out either success or failed response
-//            return ResponseEntity.badRequest().build();
             return ResponseEntity.ok(accountService.checkExistingAccount(accountId));
         }
 
