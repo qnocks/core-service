@@ -4,3 +4,7 @@ spring:
 
 server:
   port: 8082
+
+mock:
+  response:
+    success-probability: 0.8
