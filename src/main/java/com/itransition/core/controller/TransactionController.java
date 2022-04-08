@@ -2,7 +2,6 @@ package com.itransition.core.controller;
 
 import com.itransition.core.dto.TransactionReplenishDto;
 import com.itransition.core.service.TransactionService;
-import com.itransition.core.util.AuthorizationUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -22,10 +21,7 @@ public class TransactionController {
     @PostMapping
     public ResponseEntity<?> replenishTransaction(@RequestBody TransactionReplenishDto replenishDto,
                                                @RequestHeader HttpHeaders headers) {
-        if (AuthorizationUtils.checkAuthorization(headers)) {
-            transactionService.replenish(replenishDto);
-        }
-
+        transactionService.replenish(replenishDto);
         return ResponseEntity.ok().build();
     }
 }

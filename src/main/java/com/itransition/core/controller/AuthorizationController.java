@@ -3,8 +3,6 @@ package com.itransition.core.controller;
 import com.itransition.core.dto.AuthResponse;
 import com.itransition.core.service.AuthorizationService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
